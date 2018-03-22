@@ -18,7 +18,7 @@ public class Traukinys {
     private String gamintojas;
     private String miestas;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "traukinys")
     List<Vagonas> vagonai = new ArrayList<>();
 
 

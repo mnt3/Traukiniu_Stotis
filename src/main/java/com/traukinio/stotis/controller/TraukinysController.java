@@ -46,19 +46,19 @@ public class TraukinysController {
     @RequestMapping( path = "/{id}/Kvagonas",method = RequestMethod.PUT)
     void pridetiVagona(@RequestBody final KeleivinisVagonas vagonas, @PathVariable final Long id){
 
-
+        vagonas.setTraukinys(traukinysService.rodytiTraukiniPagalID(id));
         traukinysService.rodytiTraukiniPagalID(id).getVagonai().add(vagonas);
         vagonasService.sukurtiVagona(vagonas);
-        vagonas.setTraukinys(traukinysService.rodytiTraukiniPagalID(id));
+
 
     }
     @RequestMapping( path = "/{id}/Krovvagonas",method = RequestMethod.PUT)
     void pridetiVagona(@RequestBody final KrovininisVagonas vagonas, @PathVariable final Long id){
 
-
+        vagonas.setTraukinys(traukinysService.rodytiTraukiniPagalID(id));
         traukinysService.rodytiTraukiniPagalID(id).getVagonai().add(vagonas);
         vagonasService.sukurtiVagona(vagonas);
-        vagonas.setTraukinys(traukinysService.rodytiTraukiniPagalID(id));
+
 
     }
     @RequestMapping( path = "/{id}/Lvagonas",method = RequestMethod.PUT)
