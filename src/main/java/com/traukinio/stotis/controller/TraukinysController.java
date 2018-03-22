@@ -49,7 +49,7 @@ public class TraukinysController {
         vagonas.setTraukinys(traukinysService.rodytiTraukiniPagalID(id));
         traukinysService.rodytiTraukiniPagalID(id).getVagonai().add(vagonas);
         vagonasService.sukurtiVagona(vagonas);
-
+// blogai visi sitie metodai pilniau aprasyti turetu buti servise
 
     }
     @RequestMapping( path = "/{id}/Krovvagonas",method = RequestMethod.PUT)
@@ -69,10 +69,11 @@ public class TraukinysController {
         vagonasService.sukurtiVagona(vagonas);
 
 
+
     }
     @RequestMapping( path = "/{id}/vagonas",method = RequestMethod.DELETE)
-    void istrintiVagona(@PathVariable final Long id1){
-        vagonasService.istrintiVagona(id1);
+    void istrintiVagona(@PathVariable final Long id){
+        vagonasService.istrintiVagona(id);
     }
 
 }
