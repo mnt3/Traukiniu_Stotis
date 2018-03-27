@@ -3,6 +3,7 @@ package com.traukinio.stotis.model;
 import org.hibernate.annotations.ValueGenerationType;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -14,7 +15,7 @@ public class Traukinys {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Date data;
+    private Date data ;
     private String gamintojas;
     private String miestas;
 
