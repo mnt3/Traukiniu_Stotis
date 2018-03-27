@@ -14,12 +14,12 @@ import static javax.servlet.http.HttpServletResponse.*;
 /**
  * Created by JP17-2 on 2018.03.27.
  */
-//@Component("restAuthenticationEntryPoint")
-//public class SecurityEntryPoint implements AuthenticationEntryPoint {
-//    @Override
-//    public void commence(HttpServletRequest request, HttpServletResponse response,
-//                         AuthenticationException authException) throws IOException, ServletException {
-//        response.sendError(SC_UNAUTHORIZED, "Unauthorized");
-//    }
-//}
+@Component("restAuthenticationEntryPoint")
+public class SecurityEntryPoint implements AuthenticationEntryPoint {
+   @Override
+    public void commence(HttpServletRequest request, HttpServletResponse response,
+                         AuthenticationException authException) throws IOException, ServletException {
+       response.sendError(SC_UNAUTHORIZED, "Unauthorized");
+    }
+}
 
